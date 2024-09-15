@@ -1,17 +1,59 @@
 package br.com.pedro;
+import br.com.pedro.models.Operacoes;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        Scanner leitura = new Scanner(System.in);
+        Operacoes operacao = new Operacoes();
+        int opcao = 0;
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
+        System.out.println("\n          Bem-vindo ao Itaú        \n");
+
+        while (opcao != 7) {
+            operacoesMenu();
+
+            System.out.println("\nDigite o número de operação desejada: ");
+            opcao = leitura.nextInt();
+
+            switch(opcao) {
+                case 1:
+                    operacao.cadastrarConta();
+                    break;
+                case 2:
+                    operacao.consultarContas();
+                    break;
+                case 3:
+                    operacao.depositar();
+                    break;
+                case 4:
+                    operacao.sacar();
+                    break;
+                case 5:
+                    operacao.consultarSaldo();
+                    break;
+                case 6:
+                    operacao.consultarRegistros();
+                    break;
+                case 7:
+                    operacao.encerrandoOperacoes();
+                    break;
+                default:
+                    System.out.println("\nOpção inválida. Por favor, escolha uma opção válida.");
+            }
         }
+    }
+
+    public static void operacoesMenu() {
+        System.out.println("___________________________________");
+        System.out.println("\n1 - Cadastrar conta");
+        System.out.println("2 - Listar contas");
+        System.out.println("3 - Depósito bancário");
+        System.out.println("4 - Saque bancário");
+        System.out.println("5 - Consultar saldo");
+        System.out.println("6 - Consultar operação registradas");
+        System.out.println("7 - Sair");
+        System.out.println("_____________________________________");
     }
 }
