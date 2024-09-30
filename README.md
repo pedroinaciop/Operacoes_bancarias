@@ -6,7 +6,7 @@ Simulação de operações bancárias em Java utilizando POO e suas vantagens.
 ![Imagem de demonstração]()
 
 ## Tecnologias utilizadas
-[![Minhas Habilidades](https://skillicons.dev/icons?i=java)](https://skillicons.dev)
+[![Minhas Habilidades](https://skillicons.dev/icons?i=java,idea)](https://skillicons.dev)
 
 ## Autor
 
