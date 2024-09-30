@@ -9,7 +9,7 @@ public class Main {
         Operacoes operacao = new Operacoes();
         int opcao = 0;
 
-        System.out.println("\n          Bem-vindo ao Itaú        \n");
+        System.out.println("\n          Bem-vindo ao PedroBank        \n");
 
         while (opcao != 7) {
             operacoesMenu();
